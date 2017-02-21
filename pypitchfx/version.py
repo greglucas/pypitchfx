@@ -26,23 +26,19 @@ CLASSIFIERS = ["Development Status :: 3 - Alpha",
                "Topic :: Scientific/Engineering"]
 
 # Description should be a one-liner:
-description = "pypitchfx: a template for small scientific Python projects"
+description = "pypitchfx: A tool for downloading, analyzing, and visualizing pitchfx data"
 # Long description will go up on the pypi page
 long_description = """
 
-Shablona
+pypitchfx
 ========
-Shablona is a template project for small scientific Python projects.
+pypitchfx is a tool for downloading, analyzing, and visualizing pitchfx data.
 
-It contains software implementations of an analysis of some simple data, but
-more importantly, it contains infrastructure for testing, documentation,
-continuous integration and deployment, which can be easily adapted
-to use in other projects.
-
-To get started using these components in your own software, please go to the
-repository README_.
-
-.. _README: https://github.com/uwescience/pypitchfx/blob/master/README.md
+It contains a parser for obtaining the pitch data from MLB. The pitch data is
+written out to a csv file that is easy to be parsed with most statistical software.
+The analysis portion of the code is written using pandas dataframes to easily
+make selections and manipulate data. Finally, visualizations are implemented with
+matplotlib.
 
 License
 =======
@@ -50,26 +46,23 @@ License
 "LICENSE" for information on the history of this software, terms & conditions
 for usage, and a DISCLAIMER OF ALL WARRANTIES.
 
-All trademarks referenced herein are property of their respective holders.
-
-Copyright (c) 2015--, Ariel Rokem, The University of Washington
-eScience Institute.
+Copyright (c) 2017-- Greg Lucas
 """
 
 NAME = "pypitchfx"
-MAINTAINER = "Ariel Rokem"
-MAINTAINER_EMAIL = "arokem@gmail.com"
+MAINTAINER = "Greg Lucas"
+MAINTAINER_EMAIL = "greg.m.lucas@gmail.com"
 DESCRIPTION = description
 LONG_DESCRIPTION = long_description
-URL = "http://github.com/uwescience/pypitchfx"
+URL = "http://github.com/greglucas/pypitchfx"
 DOWNLOAD_URL = ""
 LICENSE = "MIT"
-AUTHOR = "Ariel Rokem"
-AUTHOR_EMAIL = "arokem@gmail.com"
+AUTHOR = "Greg Lucas"
+AUTHOR_EMAIL = "greg.m.lucas@gmail.com"
 PLATFORMS = "OS Independent"
 MAJOR = _version_major
 MINOR = _version_minor
 MICRO = _version_micro
 VERSION = __version__
 PACKAGE_DATA = {'pypitchfx': [pjoin('data', '*')]}
-REQUIRES = ["numpy"]
+REQUIRES = ["lxml,pandas,matplotlib,numpy"]
