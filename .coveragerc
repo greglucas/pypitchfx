@@ -1,7 +1,7 @@
 [run]
 branch = True
-source = shablona/*
-include = shablona/*
+source = pypitchfx/*
+include = pypitchfx/*
 omit = */setup.py
 [report]
-include = shablona/*
+include = pypitchfx/*
